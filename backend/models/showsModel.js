@@ -6,31 +6,30 @@ const showSchema = new Schema({
   id: { type: Number, required: true, index: true },
   url: { type: String, required: true },
   name: { type: String, required: true, index: 'text', weight: 3 },
-  type: { type: String, required: true },
+  type: { type: String },
   language: { type: String, required: true },
   genres: { type: [String], required: true },
-  status: { type: String, required: true },
-  runtime: { type: Number, required: true },
-  premiered: { type: Date, required: true },
-  officialSite: { type: String, required: true },
+  status: { type: String },
+  runtime: { type: Number },
+  premiered: { type: Date },
+  officialSite: { type: String },
   schedule: {
-    time: { type: String, required: true },
-    days: { type: [String], required: true }
+    time: { type: String },
+    days: { type: [String] }
   },
   rating: {
     average: { type: Number }
   },
-  weight: { type: Number, required: true },
+  weight: { type: Number },
   network: {
-    id: { type: Number, required: true },
-    name: { type: String, required: true },
+    id: { type: Number },
+    name: { type: String },
     country: {
-      name: { type: String, required: true },
-      code: { type: String, required: true },
-      timezone: { type: String, required: true }
+      name: { type: String },
+      code: { type: String },
+      timezone: { type: String }
     }
   },
-  webChannel: { type: String },
   externals: {
     tvrage: { type: Number },
     thetvdb: { type: Number },
@@ -43,20 +42,11 @@ const showSchema = new Schema({
   summary: { type: String, index: 'text', weight: 1 },
   updated: { type: Number },
   _links: {
-    self: { href: { type: String, required: true } },
+    self: { href: { type: String } },
     previousepisode: { href: { type: String } }
   }
 });
 
-showSchema.plugin(mongoose_fuzzy_searching, {
-  fields: ['name', 'summary']
-});
 const showsModel = client.model('Show', showSchema);
-
-try {
-  // showsModel.ensureIndexes();
-} catch (err) {
-  null;
-}
 
 export default showsModel;
