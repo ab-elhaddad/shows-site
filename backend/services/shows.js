@@ -63,7 +63,7 @@ class Shows {
     const summData = await showsModel
       .find(
         { summary: regex },
-        { id: 1, name: 1, rating: 1, network: 1, image: 1 }
+        { id: 1, name: 1, rating: 1, network: 1, image: 1, genres: 1 }
       )
       .exec();
 
