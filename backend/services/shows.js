@@ -54,8 +54,18 @@ class Shows {
   static getMany = async (page, word) => {
     // Getting the shows contains the word whether in name or summary
     const regex = new RegExp(word, 'ig');
-    const nameData = await showsModel.find({ name: regex }).exec();
-    const summData = await showsModel.find({ summary: regex }).exec();
+    const nameData = await showsModel
+      .find(
+        { name: regex },
+        { id: 1, name: 1, rating: 1, network: 1, image: 1 }
+      )
+      .exec();
+    const summData = await showsModel
+      .find(
+        { summary: regex },
+        { id: 1, name: 1, rating: 1, network: 1, image: 1 }
+      )
+      .exec();
 
     // Concat the two arrays and remove duplicate shows
     const concatArr = nameData.concat(summData);
