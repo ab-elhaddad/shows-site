@@ -1,0 +1,185 @@
+:root {
+  --main-color: #655aff;
+  --light-color: #f4f4fd;
+  --mid-color: #ada7ff;
+  --dark-color: rgb(32, 27, 97);
+}
+
+body {
+  background-color: var(--light-color);
+  background-image: url(https://www.pngplay.com/wp-content/uploads/13/Aesthetic-Pattern-PNG-Pic-Background.png);
+  filter: grayscale(30%);
+}
+
+.title {
+  font-weight: bold;
+  height: fit-content;
+  font-size: 28px;
+  text-shadow: 0 0 10px var(--main-color);
+  font-family: 'Karla', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+.srch-bar {
+  width: 1000px;
+  border-radius: 20px;
+}
+
+.srch-btn {
+  width: 100px;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  margin-left: 10px;
+}
+
+.srch-btn:hover {
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+.main-card {
+  cursor: pointer;
+}
+
+.movie-card {
+  padding: 10px 10px 10px 10px;
+  height: 416px;
+  width: 290px;
+  border-radius: 15px;
+  transition: 0.5s;
+  object-fit: cover;
+}
+
+.main-card:hover .movie-card {
+  padding: 0px 0px 0px 0px;
+  filter: blur(2px) brightness(0.5);
+  box-shadow: 0 0 10px var(--main-color);
+}
+
+.text-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.main-card:hover .text-overlay {
+  opacity: 100%;
+}
+
+.mov-title {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.7s;
+  padding-bottom: 10px;
+}
+
+.main-card:hover .mov-title {
+  font-size: 40px;
+}
+
+.mov-info-container {
+  display: flex;
+  justify-content: center;
+  width: 220px;
+}
+
+.mov-info {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: 1px 7px 1px 7px;
+  margin: 0px 7px 0px 7px;
+  border-radius: 20px;
+  font-size: 10px;
+  transition: 0.7s;
+}
+.main-card:hover .mov-info {
+  font-size: 15px;
+}
+
+.no-shows {
+  font-size: 110px;
+  font-weight: bold;
+  color: var(--main-color);
+  text-align: center;
+  margin-top: 150px;
+  background-color: var(--light-color);
+  border-radius: 30px;
+}
+
+.pg * {
+  font-size: 18px;
+  color: var(--main-color);
+  font-weight: 500;
+  font-family: 'Karla', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+.mv-img {
+  height: 620px;
+  width: 435px;
+  border-radius: 30px;
+  /* box-shadow: 0 0 10px black; */
+  border: 20px solid var(--light-color);
+  object-fit: cover;
+}
+
+.mv-info {
+  color: var(--dark-color);
+  width: 840px;
+  float: right;
+  border-radius: 30px;
+  border: 20px solid var(--light-color);
+  background-color: var(--light-color);
+}
+
+.mv-title {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.mv-summ {
+  font-size: 20px;
+}
+
+.mv-o-info {
+  font-size: 16px;
+}
+
+.mv-btn {
+  width: 300px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 18px;
+}
+
+.icn {
+  color: var(--dark-color);
+  padding-bottom: 4px;
+  padding-right: 2px;
+}
+
+.cats {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px 15px 0px;
+}
+
+.cat-btn {
+  margin: 0px 3px 0px 3px;
+  background-color: var(--dark-color);
+  border: 1px solid var(--light-color);
+  border-radius: 20px;
+  font-weight: 500;
+}

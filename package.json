@@ -1,0 +1,11 @@
+{
+  "name": "movies-site",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "backend:start": "cd backend && npm start",
+    "frontend:start": "cd frontend && npm start"
+  },
+  "author": "Abdelrrahman Elhaddad",
+  "license": "MIT"
+}
