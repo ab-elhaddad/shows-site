@@ -5,7 +5,7 @@ import mongoose_fuzzy_searching from 'mongoose-fuzzy-searching';
 const showSchema = new Schema({
   id: { type: Number, required: true, index: true },
   url: { type: String, required: true },
-  name: { type: String, required: true, index: 'text', weight: 3 },
+  name: { type: String, required: true },
   type: { type: String },
   language: { type: String, required: true },
   genres: { type: [String], required: true },
@@ -39,7 +39,7 @@ const showSchema = new Schema({
     medium: { type: String },
     original: { type: String }
   },
-  summary: { type: String, index: 'text', weight: 1 },
+  summary: { type: String },
   updated: { type: Number },
   _links: {
     self: { href: { type: String } },
