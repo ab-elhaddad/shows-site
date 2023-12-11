@@ -1,4 +1,5 @@
 import axios from 'axios';
+import config from '../lib/config.js';
 
 /**
  * @param {number} page
@@ -10,7 +11,7 @@ async function getShows(page, search) {
     page ||= 1;
     search ||= '';
     const data = await axios.get(
-      `http://localhost:4000/shows?page=${page}&search=${search}`
+      `${config.uri}/shows?page=${page}&search=${search}`
     );
     return data.data;
   } catch (err) {
