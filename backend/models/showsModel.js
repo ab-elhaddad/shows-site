@@ -1,6 +1,5 @@
 import client from '../config/db.js';
 import { Schema } from 'mongoose';
-import mongoose_fuzzy_searching from 'mongoose-fuzzy-searching';
 
 const showSchema = new Schema({
   id: { type: Number, required: true, index: true },
