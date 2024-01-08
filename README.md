@@ -21,6 +21,20 @@ A fullstack application that allows users to search for TV shows and get informa
 - backend - Render
 - database - MongoDB Atlas
 
+## Screenshots
+
+<p align="center">
+	<img src="screenshots/home-1.png" alt="Home page" width="1000"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/home-2.png" alt="Home page" width="1000"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/info.png" alt="Info page" width="1000"/>
+</p>
+
 ## Installation
 
 1. Clone the repository to your local machine.
@@ -33,8 +47,8 @@ A fullstack application that allows users to search for TV shows and get informa
 ## Technologies
 
 - **[React](https://reactjs.org/)** - A JavaScript library for building user interfaces.
-- **[react-router-dom](https://reactrouter.com/web/guides/quick-start)** - A collection of navigational components that compose declaratively with your application.
-- **[react-bootstrap](https://react-bootstrap.github.io/)** - The most popular front-end framework, rebuilt for React.
+- **[React Router](https://reactrouter.com/web/guides/quick-start)** - A collection of navigational components that compose declaratively with your application.
+- **[React Bootstrap](https://react-bootstrap.github.io/)** - The most popular front-end framework, rebuilt for React.
 - **[Node.js](https://nodejs.org/en/)** - A JavaScript runtime built on Chrome's V8 JavaScript engine.
 - **[Express](https://expressjs.com/)** - A fast, unopinionated, minimalist web framework for Node.js.
 - **[Mongo](https://www.mongodb.com/)** - A general purpose, document-based, distributed database built for modern application developers and for the cloud era.
