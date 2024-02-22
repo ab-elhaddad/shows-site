@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import getShow from './../utils/getShow';
 import { useParams } from 'react-router-dom';
 import ShowCard from './DetailsPage/ShowCard';
@@ -19,8 +19,13 @@ const DetailsPage = () => {
     <>
       <Container>
         <Row className="py-3">
-          <ShowCard movie={movie} />
-          <ShowInfo movie={movie} />
+          <Col sm={4}>
+            <ShowCard movie={movie} />
+          </Col>
+          <Col sm={1}></Col>
+          <Col sm={7}>
+            <ShowInfo movie={movie} />
+          </Col>
         </Row>
       </Container>
     </>
