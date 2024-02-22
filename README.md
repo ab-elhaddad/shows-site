@@ -49,10 +49,12 @@ A fullstack application that allows users to search for TV shows and get informa
 - **[React](https://reactjs.org/)** - A JavaScript library for building user interfaces.
 - **[React Router](https://reactrouter.com/web/guides/quick-start)** - A collection of navigational components that compose declaratively with your application.
 - **[React Bootstrap](https://react-bootstrap.github.io/)** - The most popular front-end framework, rebuilt for React.
+- **[Axios](https://axios-http.com/)** - A promise-based HTTP client for the browser and Node.js.
 - **[Node.js](https://nodejs.org/en/)** - A JavaScript runtime built on Chrome's V8 JavaScript engine.
 - **[Express](https://expressjs.com/)** - A fast, unopinionated, minimalist web framework for Node.js.
 - **[Mongo](https://www.mongodb.com/)** - A general purpose, document-based, distributed database built for modern application developers and for the cloud era.
 - **[Mongoose](https://mongoosejs.com/)** - A MongoDB object modeling tool designed to work in an asynchronous environment.
+- **[Docker Compose](https://docs.docker.com/compose/)** - A tool for defining and running multi-container Docker applications. (Used for the MongoDB database.)
 
 ## Features
 
