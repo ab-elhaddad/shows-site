@@ -4,6 +4,7 @@ import getShow from './../utils/getShow';
 import { useParams } from 'react-router-dom';
 import ShowCard from './DetailsPage/ShowCard';
 import ShowInfo from './DetailsPage/ShowInfo';
+import LoadingSpinner from './../components/LoadingSpinner';
 
 const DetailsPage = () => {
   const { id } = useParams();
@@ -18,15 +19,19 @@ const DetailsPage = () => {
   return (
     <>
       <Container>
-        <Row className="py-3">
-          <Col sm={4}>
-            <ShowCard movie={movie} />
-          </Col>
-          <Col sm={1}></Col>
-          <Col sm={7}>
-            <ShowInfo movie={movie} />
-          </Col>
-        </Row>
+        {movie ? (
+          <Row className="py-3">
+            <Col sm={4}>
+              <ShowCard movie={movie} />
+            </Col>
+            <Col sm={1}></Col>
+            <Col sm={7}>
+              <ShowInfo movie={movie} />
+            </Col>
+          </Row>
+        ) : (
+          <LoadingSpinner />
+        )}
       </Container>
     </>
   );

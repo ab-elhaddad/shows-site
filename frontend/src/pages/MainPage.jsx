@@ -10,7 +10,7 @@ const MainPage = () => {
     <>
       <Categories />
       <Shows />
-      {shows.length ? <PaginationComp /> : null}
+      {shows?.length ? <PaginationComp /> : null}
     </>
   );
 };

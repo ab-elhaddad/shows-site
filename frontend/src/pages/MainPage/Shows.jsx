@@ -10,6 +10,7 @@ import { pageCountContext } from '../../context/PageCountContext.jsx';
 import { categoriesContext } from './../../context/CategoriesContext';
 import extractCategories from '../../utils/extractCategories.js';
 import getCategory from './../../utils/getCategory';
+import LoadingSpinner from '../../components/LoadingSpinner.jsx';
 
 const Shows = () => {
   const { shows, setShows } = useContext(ShowsContext);
@@ -38,7 +39,7 @@ const Shows = () => {
     <>
       <Container className="my-3">
         <Row>
-          {
+          {shows ? ( // data returned from the API
             shows.length ? ( // The data returned containing shows to display
               shows.map((movie) =>
                 movie ? <ShowCard movie={movie} key={movie.id} /> : null
@@ -46,7 +47,9 @@ const Shows = () => {
             ) : shows.length === 0 ? ( // The data returned with 0 shows
               <NoShows />
             ) : null // No data returned at all [Promise pending]
-          }
+          ) : (
+            <LoadingSpinner />
+          )}
         </Row>
       </Container>
     </>

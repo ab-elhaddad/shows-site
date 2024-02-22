@@ -1,5 +1,5 @@
 :root {
-  --main-color: #655aff;
+  --main-color: #5a62ff;
   --light-color: #f4f4fd;
   --mid-color: #ada7ff;
   --dark-color: rgb(32, 27, 97);
@@ -57,7 +57,8 @@ body {
   box-shadow: 0 0 10px var(--main-color);
 }
 
-.text-overlay {
+.text-overlay,
+.text-overlay-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,13 +68,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   color: #fff;
+}
+
+.text-overlay-info {
   opacity: 0;
   transition: 0.8s;
 }
 
-.main-card:hover .text-overlay {
+.main-card:hover .text-overlay-info {
   opacity: 100%;
 }
 
@@ -181,4 +184,36 @@ body {
   border: 1px solid var(--light-color);
   border-radius: 20px;
   font-weight: 500;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.spinner {
+  width: 200px;
+  height: 200px;
+  border: 20px solid var(--light-color);
+  border-top: 20px solid var(--main-color);
+  border-radius: 50%;
+}
+
+.sm-spinner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+}
+
+.sm-spinner {
+  width: 80px;
+  height: 80px;
+  border: 8px solid var(--light-color);
+  border-top: 8px solid var(--main-color);
+  border-radius: 50%;
 }
